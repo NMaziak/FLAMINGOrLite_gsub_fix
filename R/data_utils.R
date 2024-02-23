@@ -7,8 +7,7 @@ construct_obj_from_hic <- function(hic_file,
   library(strawr)
   #### get data
   options(scipen = 999)
-  chr_number <-
-  normalized_data = strawr::straw(normalization,hic_file,chr_number,chr_number,unit='BP',binsize=resolution)
+  normalized_data = strawr::straw(normalization,hic_file,chr_name,chr_name,unit='BP',binsize=resolution)
 
   #### reformat contact frequency matrix
   n <- max(normalized_data[,2])/resolution + 1
